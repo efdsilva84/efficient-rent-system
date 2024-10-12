@@ -1,0 +1,34 @@
+<div class="sidenav">
+  <div class="sidnav-profile">
+    <div class="sidenav-profile-logo">
+<h1>LOGO</h1>
+    </div>
+
+    <div class="sidenav-profile-menu">
+      <ul>
+        <li><a href=""></a>Home</li>
+        <li><a href=""></a>Dados do App</li>
+        <li><a href=""></a>Ofícios</li>
+        <li><a href=""></a>Docs</li>
+        <li><a href=""></a>FeedBack</li>
+        <li><a href=""></a>Config</li>
+        <li><a href=""></a>Tutorias</li>
+      </ul>
+    </div>
+
+    <div class="sidenav-profile-name">
+      <h1>Ed Carlos Silva</h1>
+    </div>
+
+
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]">
+        <i class="sidenav-link-icon" [class]="data.icon"></i>
+        <label class="sidenav-link-text">{{data.Label}}</label>
+      </a>
+    </li>
+  </ul>
+
+</div>
