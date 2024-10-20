@@ -15,7 +15,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 .sidenav-nav-item:hover{
   background-color: #0f172a;
@@ -29,7 +28,15 @@
 .sidenav-nav-link{
   text-decoration: none;
   color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+.sidenav-nav-link label{
+  padding-top: .5rem;
+
+}
+
 
 
 .sidnav-profile{
@@ -68,7 +75,7 @@
 .sidenav-profile-name{
   display: flex;
   align-items: center;
-  h1{
+  h6{
     color: #fff;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 

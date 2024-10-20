@@ -1,2 +1,2 @@
-<app-sidenav></app-sidenav>
-<app-body></app-body>
+<app-sidenav *ngIf="!isLoginPage()"></app-sidenav>
+<app-body [collapsed]="isSideNavCollapsed"></app-body>

@@ -13,21 +13,53 @@
         <li><a href=""></a>FeedBack</li>
         <li><a href=""></a>Config</li>
         <li><a href=""></a>Tutorias</li>
+        <li (click)="logout()"><a >&nbsp; <i class="fa-solid fa-arrow-right-from-bracket"></i></a>Sair </li>
+
       </ul>
     </div>
 
     <div class="sidenav-profile-name">
-      <h1>Ed Carlos Silva</h1>
+      <h6>Ed Carlos Silva</h6>
     </div>
 
 
   </div>
-  <ul class="sidenav-nav">
+  <!-- <ul class="sidenav-nav">
     <li class="sidenav-nav-item" *ngFor="let data of navData">
       <a href="" class="sidenav-nav-link" [routerLink]="[data.routeLink]">
         <i class="sidenav-link-icon" [class]="data.icon"></i>
         <label class="sidenav-link-text">{{data.Label}}</label>
       </a>
+
+    </li>
+  </ul> -->
+
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData" (click)="handleClick(data)">
+      <a class="sidenav-nav-link" *ngIf="data.items && data.items.length > 0" >
+        <i class="sidenav-link-icon" [class]="data.icon"></i>
+        <label class="sidenav-link-text">
+          {{data.Label}}
+        </label>
+        <i class="menu-collapsed-icon" *ngIf="data.items && collapsed"  [ngClass]="!data.expanded ? 'fa-solid fa-angle-right' : 'fa-solid fa-chevron-down'"></i>
+      </a>
+      <a  class="sidenav-nav-link" [routerLink]="[data.routeLink]" *ngIf="!data.items || ( data.items && data.items.length === 0)">
+        <i class="sidenav-link-icon" [class]="data.icon"></i>
+        <label class="sidenav-link-text">{{data.Label}}</label>
+      </a>
+
+      <div *ngIf="collapsed && data.items && data.items.length > 0">
+          <app-sublevel-menu
+          [data]="data"
+          [collapsed]="collapsed",
+          [multiple]="multiple",
+          [expanded]="data.expanded"
+          >
+
+          </app-sublevel-menu>
+      </div>
+
+
     </li>
   </ul>
 
