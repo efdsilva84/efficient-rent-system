@@ -23,6 +23,8 @@ import { ControleComponent } from './controle/controle.component';
 import { RelatoriosComponent } from './relatorios/relatorios.component';
 import { MultasComponent } from './multas/multas.component';
 import { JuridicoComponent } from './juridico/juridico.component';
+import { TOAST_CONFIG, ToastrComponentlessModule, ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -45,13 +47,19 @@ import { JuridicoComponent } from './juridico/juridico.component';
     ControleComponent,
     RelatoriosComponent,
     MultasComponent,
-    JuridicoComponent
+    JuridicoComponent,
+
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule,
+    ToastrModule.forRoot(),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

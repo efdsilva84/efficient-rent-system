@@ -1,6 +1,35 @@
-table{
-  width: 95%;
+.table{
+  margin-left: 2rem;
+  /* tbody{
+    text-align: center;
+  } */
+   text-align: center;
+   margin-top: 3rem;
+}
+.bt{
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.del{
+  background-color: #141a28;
+  padding: .3rem;
+  border-radius: 3px;
+  color: #fff;
+}
+.edit{
+  background-color: #73d000;
+  padding: .3rem;
+  border-radius: 3px;
+  color: #fff;
+}
+.bloque{
+  background-color: #3b5bd2;
+  padding: .3rem;
+  border-radius: 3px;
+  color: #fff;
 }
 *{
-  margin: auto;
+  margin-left: 2rem;
+
 }
+

@@ -1,1 +1,91 @@
-<h1>Usuários</h1>
+<button type="button" class="btn btn-primary bt" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Novo Usuario
+</button>
+<table class="table align-middle">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Email</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Sit</td>
+      <td>Amet</td>
+      <td>
+    efdsilva84
+      </td>
+      <td>
+        <i class="fa-solid fa-trash"></i>&nbsp;&nbsp;
+        <i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;
+        <i class="fa-solid fa-ban"></i>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Novo Usuário</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3" [formGroup]="dadosForm" (ngSubmit)="signIn()">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Nome Completo</label>
+            <input type="email" class="form-control" id="inputEmail4" formControlName="nome">
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">CPF</label>
+            <input type="password" class="form-control" id="inputPassword4" formControlName="cpf">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Senha:</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Senha" formControlName="senha">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress2" class="form-label">Setor</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Setor" formControlName="setor">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Matrícula:</label>
+            <input type="text" class="form-control" id="inputCity" formControlName="mt">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Perfil:</label>
+            <select id="inputState" class="form-select" formControlName="perfil">
+              <option selected>Selecione...</option>
+              <option>Manutenção</option>
+              <option>Recebimento</option>
+              <option>Gerente</option>
+
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Celular:</label>
+            <input type="text" class="form-control" id="inputZip" formControlName="celular">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+

@@ -8,7 +8,7 @@ import { filter } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'vv';
+  title = 'Efficient';
   isSideNavCollapsed = false;
 
   constructor(private router: Router){
